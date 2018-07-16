@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class NameListTest {
     private NameList nameList;
@@ -31,4 +32,10 @@ public class NameListTest {
         nameList.setNames(nameArray2);
         assertEquals(nameArray2, nameList.getNames());
     }
+
+    // used to test randomness but unit test not the best
+//    @Test
+//    public void canReturnRandomName(){
+//        assertEquals("Bill", nameList.getRandomName());
+//    }
 }
