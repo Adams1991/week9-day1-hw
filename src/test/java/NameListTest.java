@@ -38,4 +38,9 @@ public class NameListTest {
 //    public void canReturnRandomName(){
 //        assertEquals("Bill", nameList.getRandomName());
 //    }
+
+    @Test
+    public void canReturnArrayWithRandomPair (){
+        assertEquals(2, nameList.getRandomPair().size());
+    }
 }

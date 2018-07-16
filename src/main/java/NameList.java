@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Random;
 
 public class NameList {
@@ -23,4 +24,15 @@ public class NameList {
     }
 
 
+    public ArrayList<String> getRandomPair() {
+        ArrayList<String> randomPair = new ArrayList<>();
+
+        String randomName1 = getRandomName();
+        String randomName2 = getRandomName();
+
+        randomPair.add(randomName1);
+        randomPair.add(randomName2);
+
+        return randomPair;
+    }
 }
