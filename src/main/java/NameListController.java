@@ -28,6 +28,14 @@ public class NameListController {
             return new ModelAndView(model, "onename.vtl");
         }, velocityTemplateEngine);
 
+        get("/two", (req, res) -> {
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("names", nameList.getRandomPair());
+            return new ModelAndView(model, "twoname.vtl");
+        }, velocityTemplateEngine);
+
+
 
 
     }
