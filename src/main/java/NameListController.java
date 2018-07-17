@@ -35,6 +35,21 @@ public class NameListController {
             return new ModelAndView(model, "twoname.vtl");
         }, velocityTemplateEngine);
 
+        get("/three", (req, res) -> {
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("names", nameList.getRandomArray(3));
+            return new ModelAndView(model, "threename.vtl");
+        }, velocityTemplateEngine);
+
+
+        get("/four", (req, res) -> {
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("names", nameList.getRandomArray(4));
+            return new ModelAndView(model, "fourname.vtl");
+        }, velocityTemplateEngine);
+
 
 
 

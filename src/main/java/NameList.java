@@ -35,4 +35,15 @@ public class NameList {
 
         return randomPair;
     }
+
+    public ArrayList<String> getRandomArray(int namesNeeded){
+        ArrayList<String> randomArray = new ArrayList<>();
+        for (int i =0; i < namesNeeded; i ++) {
+            randomArray.add(getRandomName());
+        }
+        return  randomArray;
+    }
+
+
+
 }
