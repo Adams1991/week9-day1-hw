@@ -16,7 +16,6 @@ public class NameListController {
         names.add("Bill");
         names.add("Bob");
         names.add("Hannah");
-        names.add("Luna");
         NameList nameList = new NameList(names);
 
 
@@ -38,7 +37,7 @@ public class NameListController {
         get("/three", (req, res) -> {
 
             HashMap<String, Object> model = new HashMap<>();
-            model.put("names", nameList.getRandomArray(3));
+            model.put("names", nameList.getRandomArray(nameList.getNames().size()));
             return new ModelAndView(model, "threename.vtl");
         }, velocityTemplateEngine);
 
@@ -46,7 +45,7 @@ public class NameListController {
         get("/four", (req, res) -> {
 
             HashMap<String, Object> model = new HashMap<>();
-            model.put("names", nameList.getRandomArray(4));
+            model.put("names", nameList.getRandomArray(nameList.getNames().size()));
             return new ModelAndView(model, "fourname.vtl");
         }, velocityTemplateEngine);
 

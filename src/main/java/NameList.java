@@ -36,9 +36,9 @@ public class NameList {
         return randomPair;
     }
 
-    public ArrayList<String> getRandomArray(int namesNeeded){
+    public ArrayList<String> getRandomArray(int namesAvail){
         ArrayList<String> randomArray = new ArrayList<>();
-        for (int i =0; i < namesNeeded; i ++) {
+        for (int i =0; i < namesAvail; i ++) {
             randomArray.add(getRandomName());
         }
         return  randomArray;
